@@ -20,8 +20,21 @@ pip install nnunetv2
 
 ### **Step 1: Plan and Preprocess**
 ```bash
+cd /home/ygao130/Auto/STOR674/scripts/01-segmentation/nnUnet &&
+export nnUNet_raw="/home/ygao130/Auto/STOR674/scripts/01-segmentation/nnUnet/nnUNet_raw" && 
+export nnUNet_preprocessed="/home/ygao130/Auto/STOR674/scripts/01-segmentation/nnUnet/nnUNet_preprocessed" &&
+export nnUNet_results="/home/ygao130/Auto/STOR674/scripts/01-segmentation/nnUnet/nnUNet_results" &&
+nnUNetv2_extract_fingerprint -d 001 --verify_dataset_integrity
 
-cd /home/ygao130/Auto/STOR674/scripts/01-segmentation/nnUnet && export nnUNet_raw="/home/ygao130/Auto/STOR674/scripts/01-segmentation/nnUnet/nnUNet_raw" && export nnUNet_preprocessed="/home/ygao130/Auto/STOR674/scripts/01-segmentation/nnUnet/nnUNet_preprocessed" && export nnUNet_results="/home/ygao130/Auto/STOR674/scripts/01-segmentation/nnUnet/nnUNet_results" && nnUNetv2_plan_and_preprocess -d 001 -pl nnUNetPlannerResEncL --verify_dataset_integrity
+
+
+
+
+cd /home/ygao130/Auto/STOR674/scripts/01-segmentation/nnUnet && 
+export nnUNet_raw="/home/ygao130/Auto/STOR674/scripts/01-segmentation/nnUnet/nnUNet_raw" && 
+export nnUNet_preprocessed="/home/ygao130/Auto/STOR674/scripts/01-segmentation/nnUnet/nnUNet_preprocessed" && 
+export nnUNet_results="/home/ygao130/Auto/STOR674/scripts/01-segmentation/nnUnet/nnUNet_results" && 
+nnUNetv2_plan_and_preprocess -d 001 -pl nnUNetPlannerResEncL --verify_dataset_integrity
 
 cd /home/ygao130/Auto/BVSeg/nnUNet && export nnUNet_raw="/home/ygao130/Auto/BVSeg/nnUNet/nnUNet_raw" && export nnUNet_preprocessed="/home/ygao130/Auto/BVSeg/nnUNet/nnUNet_preprocessed" && export nnUNet_results="/home/ygao130/Auto/BVSeg/nnUNet/nnUNet_results" && nnUNetv2_plan_experiment -d 001 -pl nnUNetPlannerResEncL --verify_dataset_integrity
 ```
