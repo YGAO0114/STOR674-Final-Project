@@ -1,0 +1,41 @@
+# nnUNet Environment Requirements
+# Core nnUNet packages
+nnunetv2==2.6.2
+batchgenerators==0.25.1
+batchgeneratorsv2==0.3.0
+dynamic_network_architectures==0.4.2
+
+# Medical imaging and image processing
+nibabel==5.3.2
+SimpleITK==2.5.2
+scikit-image==0.24.0
+imageio==2.33.1
+tifffile==2023.4.12
+Pillow==10.4.0
+
+# Deep learning frameworks
+torch==2.9.0
+torchvision==0.24.0
+timm==1.0.20
+
+# Scientific computing
+numpy==1.26.4
+scipy==1.13.1
+pandas==2.2.2
+matplotlib==3.9.2
+seaborn==0.13.2
+
+# Data handling and utilities
+h5py==3.11.0
+tqdm==4.66.5
+einops==0.8.1
+connected-components-3d==3.26.0
+
+# Visualization and GUI
+napari==0.6.2
+vispy==0.15.2
+
+# Development and utilities
+pyyaml==6.0.1
+tqdm==4.66.5
+pathlib2==2.3.7
