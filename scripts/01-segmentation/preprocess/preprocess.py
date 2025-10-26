@@ -54,17 +54,11 @@ def convert_rgb_to_grayscale_and_save(rgb_dir, label_dir, output_img_dir, output
                 img_gray.save(output_path)
                 print(f"Converted: {fname} -> {output_fname}")
                 
-                # Copy corresponding label with nnUNet naming: vessel_XXX.tif
-                label_fname = fname.replace("copy.tif", "groundtruth.tif").replace(".tif", "groundtruth.tif")
-                label_path = os.path.join(label_dir, label_fname)
-                
-                if os.path.exists(label_path):
-                    output_label_fname = f"{prefix}_{case_num:03d}.tif"
-                    output_label_path = os.path.join(output_label_dir, output_label_fname)
-                    shutil.copy2(label_path, output_label_path)
-                    print(f"Copied label: {label_fname} -> {output_label_fname}")
-                else:
-                    print(f"Warning: Label file not found: {label_path}")
+                # Copy the grayscale image to labels directory with vessel_XXX.tif naming
+                output_label_img_fname = f"{prefix}_{case_num:03d}.tif"
+                output_label_img_path = os.path.join(output_label_dir, output_label_img_fname)
+                img_gray.save(output_label_img_path)
+                print(f"Copied image to labels: {fname} -> {output_label_img_fname}")
                 
                 converted_count += 1
                 
@@ -81,7 +75,7 @@ train_count = convert_rgb_to_grayscale_and_save(
 
 print("\n=== Converting Validation Data ===")
 val_count = convert_rgb_to_grayscale_and_save(
-    val_rgb_dir, val_label_dir, images_ts_dir, labels_ts_dir, "vessel", start_idx=train_count
+    val_rgb_dir, val_label_dir, images_ts_dir, labels_ts_dir, "vessel", start_idx=1
 )
 
 print(f"\n=== Conversion Complete ===")
