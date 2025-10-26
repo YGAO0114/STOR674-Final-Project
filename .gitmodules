@@ -1,3 +1,0 @@
-[submodule "scripts/01-segmentation/nnUNet"]
-	path = scripts/01-segmentation/nnUNet
-	url = https://github.com/MIC-DKFZ/nnUNet.git
