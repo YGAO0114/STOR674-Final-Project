@@ -147,30 +147,9 @@ class DiceScoreCalculator:
             return None, None, None
 
 def print_dice_summary(dice_score):
-    """Print a formatted summary of DICE score."""
-    print("\n" + "="*60)
-    print("DICE SCORE SUMMARY")
-    print("="*60)
-    
+
     print(f"DICE Score: {dice_score:.4f}")
-    
-    # Interpretation
-    print(f"\nINTERPRETATION:")
-    if dice_score >= 0.8:
-        print(f"   Excellent segmentation quality (DICE ≥ 0.8)")
-    elif dice_score >= 0.7:
-        print(f"   Good segmentation quality (DICE ≥ 0.7)")
-    elif dice_score >= 0.5:
-        print(f"   Moderate segmentation quality (DICE ≥ 0.5)")
-    else:
-        print(f"   Poor segmentation quality (DICE < 0.5)")
-    
-    print(f"\nDICE SCORE GUIDE:")
-    print(f"   • 1.0 = Perfect overlap")
-    print(f"   • 0.8+ = Excellent")
-    print(f"   • 0.7+ = Good")
-    print(f"   • 0.5+ = Moderate")
-    print(f"   • <0.5 = Poor")
+
 
 def main():
     parser = argparse.ArgumentParser(description='Calculate DICE score')

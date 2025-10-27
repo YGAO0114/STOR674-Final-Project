@@ -69,18 +69,17 @@ export nnUNet_preprocessed="/home/ygao130/Auto/STOR674/scripts/01-segmentation/n
 export nnUNet_results="/home/ygao130/Auto/STOR674/scripts/01-segmentation/nnUnet/nnUNet_results" && 
 nnUNetv2_predict -d 001 -i /home/ygao130/Auto/STOR674/scripts/01-segmentation/nnUnet/nnUNet_raw/Dataset001_vessel/imagesTs -o /home/ygao130/Auto/STOR674/scripts/01-segmentation/nnUnet/nnUNet_results/Dataset001_vessel/nnUNetTrainer_50epochs__nnUNetResEncUNetLPlans__2d/predictions -c 2d -tr nnUNetTrainer_50epochs -p nnUNetResEncUNetLPlans -f all
 
+
+cd /home/ygao130/Auto/STOR674/scripts/01-segmentation/nnUnet && 
+export nnUNet_raw="/home/ygao130/Auto/STOR674/scripts/01-segmentation/nnUnet/nnUNet_raw" && 
+export nnUNet_preprocessed="/home/ygao130/Auto/STOR674/scripts/01-segmentation/nnUnet/nnUNet_preprocessed" && 
+export nnUNet_results="/home/ygao130/Auto/STOR674/scripts/01-segmentation/nnUnet/nnUNet_results" && 
+nnUNetv2_predict -d 001 -i /home/ygao130/Auto/STOR674/scripts/01-segmentation/nnUnet/nnUNet_raw/Dataset001_vessel/imagesTs -o /home/ygao130/Auto/STOR674/scripts/01-segmentation/nnUnet/nnUNet_results/Dataset001_vessel/nnUNetTrainer_100epochs__nnUNetResEncUNetLPlans__2d/predictions -c 2d -tr nnUNetTrainer_100epochs -p nnUNetResEncUNetLPlans -f all 
+
+
+cd /home/ygao130/Auto/STOR674/scripts/01-segmentation/nnUnet && 
+export nnUNet_raw="/home/ygao130/Auto/STOR674/scripts/01-segmentation/nnUnet/nnUNet_raw" && 
+export nnUNet_preprocessed="/home/ygao130/Auto/STOR674/scripts/01-segmentation/nnUnet/nnUNet_preprocessed" && 
+export nnUNet_results="/home/ygao130/Auto/STOR674/scripts/01-segmentation/nnUnet/nnUNet_results" && 
+nnUNetv2_predict -d 001 -i /home/ygao130/Auto/STOR674/scripts/01-segmentation/nnUnet/nnUNet_raw/Dataset001_vessel/imagesTs -o /home/ygao130/Auto/STOR674/scripts/01-segmentation/nnUnet/nnUNet_results/Dataset001_vessel/nnUNetTrainer_250epochs_NoMirroring__nnUNetResEncUNetLPlans__2d/predictions -c 2d -tr nnUNetTrainer_250epochs_NoMirroring -p nnUNetResEncUNetLPlans -f all 
 ```
-
-## 📋 **Dataset Details**
-- **Images**: CT scans (3D NIfTI format)
-- **Labels**: Binary masks (0=background, 1=blood vessel)
-- **Training cases**: 18 patients
-- **File format**: `.nii.gz`
-- **Spatial alignment**: Already aligned using your preprocessing pipeline
-
-
-## 🎯 **Model Configurations Available**
-1. **2d**: 2D U-Net (fastest, least memory)
-2. **3d_fullres**: 3D U-Net on full resolution (recommended)
-3. **3d_lowres**: 3D U-Net on low resolution
-4. **3d_cascade_fullres**: 3D cascade (for large images)
