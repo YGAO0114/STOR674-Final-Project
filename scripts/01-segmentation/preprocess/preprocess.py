@@ -23,7 +23,7 @@ os.makedirs(images_ts_dir, exist_ok=True)
 os.makedirs(labels_tr_dir, exist_ok=True)
 os.makedirs(labels_ts_dir, exist_ok=True)
 
-def convert_rgb_to_grayscale_and_save(rgb_dir, label_dir, output_img_dir, output_label_dir, prefix, start_idx=0):
+def convert_rgb_to_grayscale_and_save(rgb_dir, output_img_dir, prefix, start_idx=0):
     """Convert RGB images to grayscale and save with nnUNet naming convention"""
     
     if not os.path.exists(rgb_dir):
@@ -54,12 +54,6 @@ def convert_rgb_to_grayscale_and_save(rgb_dir, label_dir, output_img_dir, output
                 img_gray.save(output_path)
                 print(f"Converted: {fname} -> {output_fname}")
                 
-                # Copy the grayscale image to labels directory with vessel_XXX.tif naming
-                output_label_img_fname = f"{prefix}_{case_num:03d}.tif"
-                output_label_img_path = os.path.join(output_label_dir, output_label_img_fname)
-                img_gray.save(output_label_img_path)
-                print(f"Copied image to labels: {fname} -> {output_label_img_fname}")
-                
                 converted_count += 1
                 
             except Exception as e:
@@ -68,20 +62,62 @@ def convert_rgb_to_grayscale_and_save(rgb_dir, label_dir, output_img_dir, output
     
     return converted_count
 
-print("=== Converting Training Data ===")
-train_count = convert_rgb_to_grayscale_and_save(
-    train_rgb_dir, train_label_dir, images_tr_dir, labels_tr_dir, "vessel", start_idx=0
+def copy_labels_to_nnunet(label_dir, output_label_dir, prefix, start_idx=0):
+    """Copy label files to nnUNet format with proper naming"""
+    
+    if not os.path.exists(label_dir):
+        print(f"Warning: {label_dir} does not exist")
+        return 0
+    
+    copied_count = 0
+    
+    for fname in os.listdir(label_dir):
+        if fname.endswith((".tif", ".tiff")):
+            try:
+                # Create nnUNet naming convention: vessel_XXX.tif
+                case_num = start_idx + copied_count
+                output_fname = f"{prefix}_{case_num:03d}.tif"
+                output_path = os.path.join(output_label_dir, output_fname)
+                
+                # Copy the label file
+                shutil.copy2(os.path.join(label_dir, fname), output_path)
+                print(f"Copied label: {fname} -> {output_fname}")
+                
+                copied_count += 1
+                
+            except Exception as e:
+                print(f"Error processing {fname}: {e}")
+                continue
+    
+    return copied_count
+
+print("=== Converting Training Images ===")
+train_img_count = convert_rgb_to_grayscale_and_save(
+    train_rgb_dir, images_tr_dir, "vessel", start_idx=0
 )
 
-print("\n=== Converting Validation Data ===")
-val_count = convert_rgb_to_grayscale_and_save(
-    val_rgb_dir, val_label_dir, images_ts_dir, labels_ts_dir, "vessel", start_idx=1
+print("\n=== Copying Training Labels ===")
+train_label_count = copy_labels_to_nnunet(
+    train_label_dir, labels_tr_dir, "vessel", start_idx=0
+)
+
+print("\n=== Converting Validation Images ===")
+val_img_count = convert_rgb_to_grayscale_and_save(
+    val_rgb_dir, images_ts_dir, "vessel", start_idx=1
+)
+
+print("\n=== Copying Validation Labels ===")
+val_label_count = copy_labels_to_nnunet(
+    val_label_dir, labels_ts_dir, "vessel", start_idx=1
 )
 
 print(f"\n=== Conversion Complete ===")
-print(f"Training images converted: {train_count}")
-print(f"Validation images converted: {val_count}")
-print(f"Total images processed: {train_count + val_count}")
+print(f"Training images converted: {train_img_count}")
+print(f"Training labels copied: {train_label_count}")
+print(f"Validation images converted: {val_img_count}")
+print(f"Validation labels copied: {val_label_count}")
+print(f"Total images processed: {train_img_count + val_img_count}")
+print(f"Total labels processed: {train_label_count + val_label_count}")
 
 # Verify the output
 print(f"\n=== Output Verification ===")

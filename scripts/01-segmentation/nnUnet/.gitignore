@@ -1,0 +1,37 @@
+# nnUNet specific ignores
+nnUNet_results/
+nnUNet_preprocessed/
+nnUNet_raw/
+
+# Model files
+*.pth
+*.pkl
+*.h5
+*.hdf5
+*.ckpt
+*.pt
+*.bin
+
+# Logs and outputs
+logs/
+jobs/
+*.log
+*.out
+*.err
+training_log_*.txt
+
+# Large image files
+*.tif
+*.tiff
+*.nii
+*.nii.gz
+*.dcm
+*.dicom
+*.nrrd
+*.mha
+*.mhd
+*.raw
+
+# SLURM files
+slurm-*.out
+slurm-*.err
