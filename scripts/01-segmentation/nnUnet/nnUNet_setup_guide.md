@@ -1,6 +1,6 @@
-# 🏥 nnU-Net Setup Guide for Blood Vessel Segmentation
+# nnU-Net Setup Guide for Blood Vessel Segmentation
 
-## 📊 **Dataset Overview**
+## **Dataset Overview**
 - **Dataset ID**: 001
 - **Dataset Name**: Dataset001_BloodVessels  
 - **Total Patients**: 18 patients with CT images and blood vessel masks
@@ -10,7 +10,7 @@
 - **Task**: Binary segmentation (background vs blood vessels)
 
 
-## 🚀 **Next Steps to Train nnU-Net**
+## **Next Steps to Train nnU-Net**
 ## set up env:
 
 ```bash
@@ -27,14 +27,17 @@ export nnUNet_preprocessed="/home/ygao130/Auto/STOR674/scripts/01-segmentation/n
 export nnUNet_results="/home/ygao130/Auto/STOR674/scripts/01-segmentation/nnUnet/nnUNet_results" &&
 nnUNetv2_extract_fingerprint -d 001 --verify_dataset_integrity
 
-
 cd /home/ygao130/Auto/STOR674/scripts/01-segmentation/nnUnet && 
 export nnUNet_raw="/home/ygao130/Auto/STOR674/scripts/01-segmentation/nnUnet/nnUNet_raw" && 
 export nnUNet_preprocessed="/home/ygao130/Auto/STOR674/scripts/01-segmentation/nnUnet/nnUNet_preprocessed" && 
 export nnUNet_results="/home/ygao130/Auto/STOR674/scripts/01-segmentation/nnUnet/nnUNet_results" && 
 nnUNetv2_plan_and_preprocess -d 001 -pl nnUNetPlannerResEncL --verify_dataset_integrity
 
-# cd /home/ygao130/Auto/BVSeg/nnUNet && export nnUNet_raw="/home/ygao130/Auto/BVSeg/nnUNet/nnUNet_raw" && export nnUNet_preprocessed="/home/ygao130/Auto/BVSeg/nnUNet/nnUNet_preprocessed" && export nnUNet_results="/home/ygao130/Auto/BVSeg/nnUNet/nnUNet_results" && nnUNetv2_plan_experiment -d 001 -pl nnUNetPlannerResEncL --verify_dataset_integrity
+# cd /home/ygao130/Auto/STOR674/scripts/01-segmentation/nnUnet && 
+# export nnUNet_raw="/home/ygao130/Auto/STOR674/scripts/01-segmentation/nnUnet/nnUNet_raw" && 
+# export nnUNet_preprocessed="/home/ygao130/Auto/STOR674/scripts/01-segmentation/nnUnet/nnUNet_preprocessed" && 
+# export nnUNet_results="/home/ygao130/Auto/STOR674/scripts/01-segmentation/nnUnet/nnUNet_results" && 
+# nnUNetv2_plan_and_preprocess -d 001 -pl nnUNetPlannerResEncL_custom --verify_dataset_integrity
 ```
 This will:
 - Analyze your dataset properties
