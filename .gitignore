@@ -21,16 +21,12 @@ jobs/
 training_log_*.txt
 
 # Large data files
-*.tif
-*.tiff
-*.nii
-*.nii.gz
-*.dcm
-*.dicom
-*.nrrd
-*.mha
-*.mhd
-*.raw
+# *.tif
+# *.tiff
+# *.nii
+# *.nii.gz
+
+# *.raw
 
 # Python cache and compiled files
 __pycache__/
