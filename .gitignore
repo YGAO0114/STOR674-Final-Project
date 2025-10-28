@@ -1,7 +1,7 @@
 # nnUNet specific files and directories
-nnUNet_results/
-nnUNet_preprocessed/
-nnUNet_raw/
+# nnUNet_results/
+# nnUNet_preprocessed/
+# nnUNet_raw/
 
 # Model checkpoints and weights
 *.pth
