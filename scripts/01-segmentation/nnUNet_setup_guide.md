@@ -134,11 +134,16 @@ export nnUNet_preprocessed="/home/ygao130/Auto/STOR674/scripts/01-segmentation/n
 export nnUNet_results="/home/ygao130/Auto/STOR674/scripts/01-segmentation/nnUnet/nnUNet_results"
 
 # Run inference with 250-epoch model
+cd /home/ygao130/Auto/STOR674/scripts/01-segmentation/nnUnet && 
+export nnUNet_raw="/home/ygao130/Auto/STOR674/scripts/01-segmentation/nnUnet/nnUNet_raw" && 
+export nnUNet_preprocessed="/home/ygao130/Auto/STOR674/scripts/01-segmentation/nnUnet/nnUNet_preprocessed" &&
+export nnUNet_results="/home/ygao130/Auto/STOR674/scripts/01-segmentation/nnUnet/nnUNet_results" &&
 nnUNetv2_predict -d 001 \
 -i /home/ygao130/Auto/STOR674/scripts/01-segmentation/nnUnet/nnUNet_raw/Dataset001_vessel/imagesTs \
 -o /home/ygao130/Auto/STOR674/scripts/01-segmentation/nnUnet/nnUNet_results/Dataset001_vessel/nnUNetTrainer_250epochs_NoMirroring__nnUNetResEncUNetLPlans__2d/predictions \
 -c 2d -tr nnUNetTrainer_250epochs_NoMirroring -p nnUNetResEncUNetLPlans -f all
 ```
+
 
 **Inference Parameters Explained:**
 - `-d 001`: Dataset ID
