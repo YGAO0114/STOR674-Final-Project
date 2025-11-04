@@ -32,19 +32,69 @@ Data/validation_data/feature_extraction/img/
 ### Output Structure
 Reconstruction outputs are written to:
 ```
-Data/validation_data/feature_extraction/feature/
-├── N_129_alldata.xlsx
-├── N_129_degreedata.xlsx
-├── N_129_network.png
-├── N_129_groundtruth.tif_alldata.xlsx
-├── N_129_groundtruth.tif_degreedata.xlsx
-├── N_129_groundtruth.tif_network.png
-├── N_129_predicted_viz.tif_alldata.xlsx
-├── N_129_predicted_viz.tif_degreedata.xlsx
-├── N_129_predicted_viz.tif_network.png
-├── N_129_predicted.tif_alldata.xlsx
-├── N_129_predicted.tif_degreedata.xlsx
-└── N_129_predicted.tif_network.png
+Data/validation_data/feature_extraction/feature/p2-p7/
+├── vessel_p2_alldata.xlsx
+├── vessel_p2_degreedata.xlsx
+├── vessel_p2_network.png
+├── vessel_p2_angle_statistics.xlsx
+├── vessel_p2_betti_numbers.xlsx
+├── vessel_p2_fractal_dimension.xlsx
+├── vessel_p2_regional_area.xlsx
+├── vessel_p2_vascular_density.xlsx
+│
+├── vessel_p3_alldata.xlsx
+├── vessel_p3_degreedata.xlsx
+├── vessel_p3_network.png
+├── vessel_p3_angle_statistics.xlsx
+├── vessel_p3_betti_numbers.xlsx
+├── vessel_p3_fractal_dimension.xlsx
+├── vessel_p3_regional_area.xlsx
+├── vessel_p3_vascular_density.xlsx
+│
+├── vessel_p4_alldata.xlsx
+├── vessel_p4_degreedata.xlsx
+├── vessel_p4_network.png
+├── vessel_p4_angle_statistics.xlsx
+├── vessel_p4_betti_numbers.xlsx
+├── vessel_p4_fractal_dimension.xlsx
+├── vessel_p4_regional_area.xlsx
+├── vessel_p4_vascular_density.xlsx
+│
+├── vessel_p5_alldata.xlsx
+├── vessel_p5_degreedata.xlsx
+├── vessel_p5_network.png
+├── vessel_p5_angle_statistics.xlsx
+├── vessel_p5_betti_numbers.xlsx
+├── vessel_p5_fractal_dimension.xlsx
+├── vessel_p5_regional_area.xlsx
+├── vessel_p5_vascular_density.xlsx
+│
+├── vessel_p6_alldata.xlsx
+├── vessel_p6_degreedata.xlsx
+├── vessel_p6_network.png
+├── vessel_p6_angle_statistics.xlsx
+├── vessel_p6_betti_numbers.xlsx
+├── vessel_p6_fractal_dimension.xlsx
+├── vessel_p6_regional_area.xlsx
+├── vessel_p6_vascular_density.xlsx
+│
+├── vessel_p7_alldata.xlsx
+├── vessel_p7_degreedata.xlsx
+├── vessel_p7_network.png
+├── vessel_p7_angle_statistics.xlsx
+├── vessel_p7_betti_numbers.xlsx
+├── vessel_p7_fractal_dimension.xlsx
+├── vessel_p7_regional_area.xlsx
+├── vessel_p7_vascular_density.xlsx
+│
+├── vessel_p7x_alldata.xlsx
+├── vessel_p7x_degreedata.xlsx
+├── vessel_p7x_network.png
+├── vessel_p7x_angle_statistics.xlsx
+├── vessel_p7x_betti_numbers.xlsx
+├── vessel_p7x_fractal_dimension.xlsx
+├── vessel_p7x_regional_area.xlsx
+└── vessel_p7x_vascular_density.xlsx
 ```
 > One trio of files (edge table, node table, network PNG) is produced **per input mask**.
 
