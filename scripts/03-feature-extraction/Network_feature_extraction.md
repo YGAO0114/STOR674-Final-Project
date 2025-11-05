@@ -29,31 +29,68 @@ The feature extraction pipeline reads node/edge tables from reconstruction and p
 ### Input Structure
 Reconstructed graph tables in:
 ```
-Data/validation_data/feature_extraction/feature/
-├── N_129_predicted_viz.tif_alldata.xlsx
-├── N_129_predicted_viz.tif_degreedata.xlsx
-├── N_129_predicted.tif_alldata.xlsx
-├── N_129_predicted.tif_degreedata.xlsx
-├── N_129_groundtruth.tif_alldata.xlsx
-└── N_129_groundtruth.tif_degreedata.xlsx
+Data/validation_data/feature_extraction/feature/p2-p7/
+├── vessel_p2_alldata.xlsx
+├── vessel_p2_degreedata.xlsx
+├── vessel_p3_alldata.xlsx
+├── vessel_p3_degreedata.xlsx
+├── vessel_p4_alldata.xlsx
+├── vessel_p4_degreedata.xlsx
+├── vessel_p5_alldata.xlsx
+├── vessel_p5_degreedata.xlsx
+├── vessel_p6_alldata.xlsx
+├── vessel_p6_degreedata.xlsx
+├── vessel_p7_alldata.xlsx
+├── vessel_p7_degreedata.xlsx
+├── vessel_p7x_alldata.xlsx
+└── vessel_p7x_degreedata.xlsx
 ```
 
 ### Output Structure
 Feature workbooks generated in the same folder:
 ```
-Data/validation_data/feature_extraction/feature/
-├── N_129_regional_area.xlsx
-├── N_129_groundtruth.tif_angle_statistics.xlsx
-├── N_129_groundtruth.tif_betti_numbers.xlsx
-├── N_129_groundtruth.tif_fractal_dimension.xlsx
-├── N_129_groundtruth.tif_vascular_density.xlsx
-├── N_129_predicted_viz.tif_angle_statistics.xlsx
-├── N_129_predicted_viz.tif_betti_numbers.xlsx
-├── N_129_predicted_viz.tif_fractal_dimension.xlsx
-├── N_129_predicted_viz.tif_vascular_density.xlsx
-├── N_129_predicted.tif_angle_statistics.xlsx
-├── N_129_predicted.tif_fractal_dimension.xlsx
-└── N_129_predicted.tif_vascular_density.xlsx
+Data/validation_data/feature_extraction/feature/p2-p7/
+├── vessel_p2_angle_statistics.xlsx
+├── vessel_p2_betti_numbers.xlsx
+├── vessel_p2_fractal_dimension.xlsx
+├── vessel_p2_regional_area.xlsx
+├── vessel_p2_vascular_density.xlsx
+│
+├── vessel_p3_angle_statistics.xlsx
+├── vessel_p3_betti_numbers.xlsx
+├── vessel_p3_fractal_dimension.xlsx
+├── vessel_p3_regional_area.xlsx
+├── vessel_p3_vascular_density.xlsx
+│
+├── vessel_p4_angle_statistics.xlsx
+├── vessel_p4_betti_numbers.xlsx
+├── vessel_p4_fractal_dimension.xlsx
+├── vessel_p4_regional_area.xlsx
+├── vessel_p4_vascular_density.xlsx
+│
+├── vessel_p5_angle_statistics.xlsx
+├── vessel_p5_betti_numbers.xlsx
+├── vessel_p5_fractal_dimension.xlsx
+├── vessel_p5_regional_area.xlsx
+├── vessel_p5_vascular_density.xlsx
+│
+├── vessel_p6_angle_statistics.xlsx
+├── vessel_p6_betti_numbers.xlsx
+├── vessel_p6_fractal_dimension.xlsx
+├── vessel_p6_regional_area.xlsx
+├── vessel_p6_vascular_density.xlsx
+│
+├── vessel_p7_angle_statistics.xlsx
+├── vessel_p7_betti_numbers.xlsx
+├── vessel_p7_fractal_dimension.xlsx
+├── vessel_p7_regional_area.xlsx
+├── vessel_p7_vascular_density.xlsx
+│
+├── vessel_p7x_angle_statistics.xlsx
+├── vessel_p7x_betti_numbers.xlsx
+├── vessel_p7x_fractal_dimension.xlsx
+├── vessel_p7x_regional_area.xlsx
+└── vessel_p7x_vascular_density.xlsx
 ```
 > Only files present in your project are listed above.
 

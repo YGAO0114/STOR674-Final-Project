@@ -21,8 +21,15 @@ from PIL import UnidentifiedImageError
 from scipy import ndimage
 from skimage import measure
 
-imgs_dir=os.getcwd() + "/img/"
-save_dir=os.getcwd() + "/feature/"
+imgs_dir=os.getcwd() + "/img/p2-p7/"
+save_dir=os.getcwd() + "/feature/p2-p7/"
+
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Enhanced Feature Extraction v3.0 - COMPLETE
+Features: Area/Volume, Branching Angles, Vascular Density, Fractal Dimension, Betti Numbers
+"""
 
 # ============================================================================
 # FEATURES 1-4: (Same as before - Area, Angles, Density, Fractal)
@@ -527,9 +534,6 @@ def calculate_betti_numbers(vessel_binary, skeleton, graph=None):
 # MAIN PROCESSING LOOP
 # ============================================================================
 
-imgs_dir = os.getcwd() + "/img/"
-save_dir = os.getcwd() + "/feature/"
-
 for path, subdirs, files in os.walk(imgs_dir):
     for i in range(len(files)):
         print("=" * 70)
@@ -627,7 +631,8 @@ for path, subdirs, files in os.walk(imgs_dir):
         print("[NEW] Calculating regional areas...")
         regional_data = calculate_regional_area(image, num_regions=(2, 2))
         regional_df = pd.DataFrame(regional_data)
-        regional_name = files[i][0:6] + "_regional_area.xlsx"
+        #regional_name = files[i][0:6] + "_regional_area.xlsx"
+        regional_name = files[i].split(".")[0] + "_regional_area.xlsx"
         regional_writer = pd.ExcelWriter(save_dir + regional_name, engine='xlsxwriter')
         regional_df.to_excel(regional_writer, index=False)
         regional_writer.close()
@@ -637,7 +642,7 @@ for path, subdirs, files in os.walk(imgs_dir):
         angle_stats, angle_detailed = extract_branching_angle_features(skeleton, sample_size=500)
         angle_stats_df = pd.DataFrame([angle_stats])
         # angle_stats_name = files[i][0:6] + "_angle_statistics.xlsx"
-        angle_stats_name = files[i] + "_angle_statistics.xlsx"
+        angle_stats_name = files[i].split(".")[0] + "_angle_statistics.xlsx"
         angle_stats_writer = pd.ExcelWriter(save_dir + angle_stats_name, engine='xlsxwriter')
         angle_stats_df.to_excel(angle_stats_writer, sheet_name='Statistics', index=False)
         
@@ -673,7 +678,7 @@ for path, subdirs, files in os.walk(imgs_dir):
         density_global_df = pd.DataFrame([density_global])
         
         # density_name = files[i][0:6] + "_vascular_density.xlsx"
-        density_name = files[i] + "_vascular_density.xlsx"
+        density_name = files[i].split(".")[0] + "_vascular_density.xlsx"
         density_writer = pd.ExcelWriter(save_dir + density_name, engine='xlsxwriter')
         density_global_df.to_excel(density_writer, sheet_name='Global', index=False)
         
@@ -708,7 +713,7 @@ for path, subdirs, files in os.walk(imgs_dir):
         
         fractal_df = pd.DataFrame([fractal_data])
         # fractal_name = files[i][0:6] + "_fractal_dimension.xlsx"
-        fractal_name = files[i] + "_fractal_dimension.xlsx"
+        fractal_name = files[i].split(".")[0] + "_fractal_dimension.xlsx"
         fractal_writer = pd.ExcelWriter(save_dir + fractal_name, engine='xlsxwriter')
         fractal_df.to_excel(fractal_writer, index=False)
         fractal_writer.close()
@@ -730,7 +735,7 @@ for path, subdirs, files in os.walk(imgs_dir):
         betti_summary_df = pd.DataFrame([betti_summary])
         
         # betti_name = files[i][0:6] + "_betti_numbers.xlsx"
-        betti_name = files[i] + "_betti_numbers.xlsx"
+        betti_name = files[i].split(".")[0] + "_betti_numbers.xlsx"
         betti_writer = pd.ExcelWriter(save_dir + betti_name, engine='xlsxwriter')
         betti_summary_df.to_excel(betti_writer, sheet_name='Summary', index=False)
         
@@ -753,14 +758,14 @@ for path, subdirs, files in os.walk(imgs_dir):
         # Save original data
         alldata = save_data(graph, center=False)
         # data_name = files[i][0:6] + "_alldata.xlsx"
-        data_name = files[i] + "_alldata.xlsx"
+        data_name = files[i].split(".")[0] + "_alldata.xlsx"
         writer = pd.ExcelWriter(save_dir + data_name, engine='xlsxwriter')
         alldata.to_excel(writer, index=False)
         writer.close()
         
         degreedata = save_degree(graph, x1, y1)
         # degree_name = files[i][0:6] + "_degreedata.xlsx"
-        degree_name = files[i] + "_degreedata.xlsx"
+        degree_name = files[i].split(".")[0] + "_degreedata.xlsx"
         degreewriter = pd.ExcelWriter(save_dir + degree_name, engine='xlsxwriter')
         degreedata.to_excel(degreewriter, index=False)
         degreewriter.close()
@@ -768,7 +773,7 @@ for path, subdirs, files in os.walk(imgs_dir):
         # Draw network
         pic = draw_graph2(np.asarray(image.convert("RGB")), graph, center=False)
         # pic_name = files[i][0:6] + "_network.png"
-        pic_name = files[i] + "_network.png"
+        pic_name = files[i].split(".")[0] + "_network.png"
         plt.imsave(save_dir + pic_name, pic)
         
         print(f"\n✓ Completed {files[i]}")
