@@ -2,9 +2,6 @@
 Unit Tests for Statistical Analysis
 Tests data loading, analysis functions, and output generation
 
-Author: Statistical Analysis Team
-Date: 2025-11-17
-
 Usage:
     # Run all tests
     pytest test_statistical_analysis.py -v
