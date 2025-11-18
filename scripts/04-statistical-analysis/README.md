@@ -2,7 +2,7 @@
 
 ## Overview
 
-This directory contains statistical analysis scripts and results for analyzing vascular development in mouse retinal vessels from postnatal day 2 (P2) to postnatal day 7 (P7).
+This directory contains statistical analysis scripts for analyzing vascular development in mouse retinal vessels from postnatal day 2 (P2) to postnatal day 7 (P7).
 
 ## Files
 
@@ -267,8 +267,7 @@ Potential additions
 
 ## Contact & Questions
 
-For questions about this analysis, please see:             
-- **Interpretation guide**: `INTERPRETATION.md`          
+For questions about this analysis, please see:                     
 - **Feature extraction guide**:   `../03-feature-extraction/Network_feature_extraction.md`         
 - **Project documentation**: `../../README.md`               
 
