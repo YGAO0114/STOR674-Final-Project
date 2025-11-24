@@ -5,6 +5,7 @@
 pandas==2.2.3
 numpy==2.2.1
 scipy==1.15.1
+scikit-learn==1.7.2
 
 # Visualization
 matplotlib==3.10.0

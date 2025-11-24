@@ -2,7 +2,7 @@
 
 ## Overview
 
-This directory contains statistical analysis scripts for analyzing vascular development in mouse retinal vessels from postnatal day 2 (P2) to postnatal day 7 (P7).
+This directory contains statistical analysis scripts and results for analyzing vascular development in mouse retinal vessels from postnatal day 2 (P2) to postnatal day 7 (P7).
 
 ## Files
 
@@ -111,7 +111,7 @@ All results are saved to `results/statistical_analysis/`:
 
 ### Major Findings
 
-1. **Vessel Area Density**: +663% increase from P2 to P7x (p < 0.0001)
+1. **Vessel Area Density**: +562% increase from P2 to P7 (p < 0.0001)
 2. **Fractal Dimension**: +16% increase (p = 0.004)
 3. **Network Loops (β₁)**: +1,030% increase (p < 0.0001)
 4. **Branching Angles**: Stable at ~65-70° (p = 0.20, not significant)
@@ -135,7 +135,7 @@ See `INTERPRETATION.md` for detailed biological interpretation and literature co
 Edit `__init__` method in `VascularDevelopmentAnalysis` class:
 
 ```python
-self.time_points = ['p2', 'p3', 'p4', 'p5', 'p6', 'p7', 'p7x']
+self.time_points = ['p2', 'p3', 'p4', 'p5', 'p6', 'p7']
 ```
 
 ### Adding New Metrics
@@ -148,7 +148,7 @@ new_feature_file = self.feature_dir / f'vessel_{tp}_new_feature.xlsx'
 if new_feature_file.exists():
     df = pd.read_excel(new_feature_file)
     df['time_point'] = tp
-    df['day'] = int(tp[1]) if tp != 'p7x' else 7.5
+    df['day'] = int(tp[1])
     self.new_feature_data.append(df)
 ```
 
@@ -207,7 +207,7 @@ Data/validation_data/feature_extraction/feature/p2-p7/
 ├── vessel_p2_angle_statistics.xlsx
 ├── vessel_p2_betti_numbers.xlsx
 ├── vessel_p2_regional_area.xlsx
-├── ... (same for p3, p4, p5, p6, p7, p7x)
+├── ... (same for p3, p4, p5, p6, p7)
 ```
 
 ## Integration with Project Pipeline
@@ -267,7 +267,8 @@ Potential additions
 
 ## Contact & Questions
 
-For questions about this analysis, please see:                     
+For questions about this analysis, please see:             
+- **Interpretation guide**: `INTERPRETATION.md`          
 - **Feature extraction guide**:   `../03-feature-extraction/Network_feature_extraction.md`         
 - **Project documentation**: `../../README.md`               
 

@@ -24,7 +24,7 @@ RESULTS_DIR = PROJECT_ROOT / 'results' / 'statistical_analysis'
 # ==============================================================================
 
 # Developmental time points to analyze
-TIME_POINTS = ['p2', 'p3', 'p4', 'p5', 'p6', 'p7', 'p7x']
+TIME_POINTS = ['p2', 'p3', 'p4', 'p5', 'p6', 'p7']
 
 # Mapping of time point names to numeric days
 TIME_POINT_TO_DAY = {
@@ -33,8 +33,7 @@ TIME_POINT_TO_DAY = {
     'p4': 4.0,
     'p5': 5.0,
     'p6': 6.0,
-    'p7': 7.0,
-    'p7x': 7.5  # Second P7 sample
+    'p7': 7.0
 }
 
 # ==============================================================================
@@ -47,7 +46,9 @@ FEATURE_FILES = {
     'fractal': 'vessel_{tp}_fractal_dimension.xlsx',
     'angle': 'vessel_{tp}_angle_statistics.xlsx',
     'betti': 'vessel_{tp}_betti_numbers.xlsx',
-    'regional': 'vessel_{tp}_regional_area.xlsx'
+    'regional': 'vessel_{tp}_regional_area.xlsx',
+    'alldata': 'vessel_{tp}_alldata.xlsx',
+    'degreedata': 'vessel_{tp}_degreedata.xlsx'
 }
 
 # Excel sheet names for each feature type
@@ -56,7 +57,9 @@ FEATURE_SHEETS = {
     'fractal': None,          # Single sheet (default)
     'angle': 'Statistics',    # Angle has 'Statistics' and 'Detailed' sheets
     'betti': 'Summary',       # Betti has 'Summary' and 'Voids' sheets
-    'regional': None          # Single sheet (default)
+    'regional': None,         # Single sheet (default)
+    'alldata': None,          # Single sheet (default)
+    'degreedata': None        # Single sheet (default)
 }
 
 # ==============================================================================
@@ -99,7 +102,10 @@ METRIC_COLORS = {
     'beta_1': 'teal',
     'loops_per_component': 'magenta',
     'void_fraction': 'navy',
-    'branch_points': 'darkgreen'
+    'branch_points': 'darkgreen',
+    'tortuosity': 'crimson',
+    'vessel_diameter': 'darkblue',
+    'segment_count': 'darkorange'
 }
 
 # Murray's Law optimal branching angle (degrees)
@@ -131,7 +137,13 @@ METRICS = {
         'beta_1',
         'beta_2',
         'loops_per_component',
+        'loops_per_component',
         'void_area_fraction'
+    ],
+    'alldata': [
+        'tortuosity',
+        'vessel_diameter',
+        'segment_count'
     ]
 }
 
@@ -144,7 +156,12 @@ TREND_METRICS = [
     'beta_0',
     'beta_1',
     'loops_per_component',
-    'void_area_fraction'
+    'beta_1',
+    'loops_per_component',
+    'void_area_fraction',
+    'tortuosity',
+    'vessel_diameter',
+    'segment_count'
 ]
 
 # ==============================================================================
@@ -157,7 +174,10 @@ OUTPUT_FILES = {
     'trend_analysis': 'trend_analysis.xlsx',
     'correlation_matrix': 'correlation_matrix.png',
     'correlations': 'correlations.xlsx',
-    'analysis_report': 'analysis_report.txt'
+    'correlation_matrix': 'correlation_matrix.png',
+    'correlations': 'correlations.xlsx',
+    'analysis_report': 'analysis_report.txt',
+    'pca_plot': 'pca_analysis.png'
 }
 
 # ==============================================================================
@@ -178,7 +198,9 @@ METRIC_RANGES = {
     'mean_angle': (0.0, 180.0),            # Degrees
     'beta_0': (0, 10000),                  # Reasonable range for components
     'beta_1': (0, 10000),                  # Reasonable range for loops
-    'void_area_fraction': (0.0, 1.0)       # Should be 0-100% (as decimal)
+    'void_area_fraction': (0.0, 1.0),      # Should be 0-100% (as decimal)
+    'tortuosity': (1.0, 10.0),             # Ratio >= 1.0
+    'vessel_diameter': (0.0, 1000.0)       # Pixels^2 (area)
 }
 
 # ==============================================================================
