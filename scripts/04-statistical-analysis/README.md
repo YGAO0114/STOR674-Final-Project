@@ -126,8 +126,6 @@ All results are saved to `results/statistical_analysis/`:
   - Asymmetric bifurcations
   - Anastomotic connections
 
-See `INTERPRETATION.md` for detailed biological interpretation and literature context.
-
 ## Customization
 
 ### Analyzing Different Time Points
