@@ -1,0 +1,18 @@
+# Python Dependencies for Statistical Analysis
+# Tested with Python 3.12.8
+
+# Core scientific computing
+pandas==2.2.3
+numpy==2.2.1
+scipy==1.15.1
+scikit-learn==1.7.2
+
+# Visualization
+matplotlib==3.10.0
+
+# Excel file support
+openpyxl==3.1.5
+
+# Optional: for testing
+pytest>=8.0.0
+pytest-cov>=4.1.0
