@@ -882,15 +882,51 @@ results/
 
 ### Key Papers
 
-1. **nnU-Net Framework**:
-   - Isensee, F., & Maier-Hein, K. H. (2019). An attempt at beating the 3D U-Net. arXiv preprint arXiv:1908.02182.
-   - Isensee, F., Jaeger, P. F., Kohl, S. A., Petersen, J., & Maier-Hein, K. H. (2021). nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation. Nature methods, 18(2), 203-211.
+Bradski, G. (2000). The OpenCV Library. Dr. Dobb's Journal of Software Tools, 25, 120–125.
 
-2. **Medical Image Segmentation**:
-   - Ronneberger, O., Fischer, P., & Brox, T. (2015). U-net: Convolutional networks for biomedical image segmentation. MICCAI 2015.
+Chung, M. K., & Lawson, R. (2022). Persistent homology in sparse regression and its application to brain morphometry. IEEE Transactions on Medical Imaging, 41(5), 1169–1183. https://pubmed.ncbi.nlm.nih.gov/25823032/
 
-3. **Network Analysis**:
-   - Newman, M. E. (2003). The structure and function of complex networks. SIAM review, 45(2), 167-256.
+Dorrell, M. I., Aguilar, E., & Friedlander, M. (2002). Retinal vascular development is mediated by endothelial filopodia, a preexisting astrocytic template and specific R-cadherin adhesion. Investigative Ophthalmology & Visual Science, 43(11), 3500–3510.
+
+Edelsbrunner, H., & Harer, J. (2010). Computational Topology: An Introduction. American Mathematical Society. https://www.maths.ed.ac.uk/~v1ranick/papers/edelcomp.pdf
+
+Family, F., Masters, B. R., & Platt, D. E. (1989). Fractal pattern formation in human retinal vessels. Physica D: Nonlinear Phenomena, 38(1–3), 98–103. https://doi.org/10.1016/0167-2789(89)90178-4
+
+Felzenszwalb, P. F., & Huttenlocher, D. P. (2012). Distance transforms of sampled functions. Theory of Computing, 8(1), 415–428. https://doi.org/10.4086/toc.2012.v008a019
+
+Fruttiger, M. (2002). Development of the mouse retinal vasculature: Angiogenesis versus vasculogenesis. Investigative Ophthalmology & Visual Science, 43(2), 522–527.
+
+Fruttiger, M. (2007). Development of the retinal vasculature. Angiogenesis, 10(2), 77–88. https://doi.org/10.1007/s10456-007-9065-1 
+
+Gerhardt, H., Golding, M., Fruttiger, M., Ruhrberg, C., Lundkvist, Å., Abramsson, A., et al. (2003). VEGF guides angiogenic sprouting utilizing endothelial tip cell filopodia. Journal of Cell Biology, 161(6), 1163–1177. https://doi.org/10.1083/jcb.200302047 
+
+Guo, Z., & Hall, R. W. (1989). Parallel thinning with two-subiteration algorithms. Communications of the ACM, 32(3), 359–373. https://doi.org/10.1145/62065.62074
+
+Hagberg, A. A., Schult, D. A., & Swart, P. J. (2008). Exploring network structure, dynamics, and function using NetworkX. In Proceedings of the 7th Python in Science Conference (pp. 11–15). https://proceedings.scipy.org/articles/TCWV9851
+
+Lorthois, S., & Cassot, F. (2010). Fractal analysis of vascular networks: Insights from morphogenesis. Journal of Theoretical Biology, 262(4), 614–633. https://doi.org/10.1016/j.jtbi.2009.10.037
+
+Mandelbrot, B. B. (1982). The Fractal Geometry of Nature. W. H. Freeman. https://www.academia.edu/119829493/The_Fractal_Geometry_of_Nature_Benoit_B_Mandelbrot
+
+Murray, C. D. (1926). The physiological principle of minimum work: I. The vascular system and the cost of blood volume. Proceedings of the National Academy of Sciences, 12(3), 207–214. https://doi.org/10.1073/pnas.12.3.207
+
+Niemisto, A., Dunmire, V., Yli-Harja, O., Zhang, W., & Shmulevich, I. (2005). Robust quantification of in vitro angiogenesis through image analysis. IEEE Transactions on Medical Imaging, 24(4), 549–553. https://doi.org/10.1109/TMI.2004.837339
+
+Seaman, M. E., Peirce, S. M., & Kelly, K. (2011). Rapid analysis of vessel elements (RAVE): A tool for studying physiologic, pathologic and tumor angiogenesis. PLoS ONE, 6(6), e20807. https://doi.org/10.1371/journal.pone.0020807
+
+Stahl, A., Connor, K. M., Sapieha, P., Chen, J., Dennison, R. J., Krah, N. M., et al. (2010). The mouse retina as an angiogenesis model. Investigative Ophthalmology & Visual Science, 51(6), 2813–2826. https://doi.org/10.1167/iovs.10-5176 
+
+Stosic, T., & Stosic, B. D. (2006). Multifractal analysis of human retinal vessels. IEEE Transactions on Medical Imaging, 25(8), 1101–1107. https://doi.org/10.1109/TMI.2006.879316
+
+Ronneberger, O., Fischer, P., & Brox, T. (2015). U-Net: Convolutional networks for biomedical image segmentation. In Medical Image Computing and Computer-Assisted Intervention – MICCAI 2015 (pp. 234–241). Springer. https://doi.org/10.1007/978-3-319-24574-4_28
+
+Tarjan, R. (1972). Depth-first search and linear graph algorithms. SIAM Journal on Computing, 1(2), 146–160. https://doi.org/10.1137/0201010
+
+van der Walt, S., Schönberger, J. L., Nunez-Iglesias, J., Boulogne, F., Warner, J. D., Yager, N., Gouillart, E., & Yu, T. (2014). scikit-image: image processing in Python. PeerJ, 2, e453. https://doi.org/10.7717/peerj.453
+
+Zamir, M. (1976). Optimality principles in arterial branching. Journal of Theoretical Biology, 62(1), 227–251. https://doi.org/10.1016/0022-5193(76)90058-8
+
+Isensee, F., Jaeger, P. F., Kohl, S. A. A., Petersen, J., & Maier-Hein, K. H. (2021). nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation. Nature Methods, 18(2), 203–211. https://doi.org/10.1038/s41592-020-01008-z
 
 ### External Resources
 
