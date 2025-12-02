@@ -8,6 +8,8 @@ A comprehensive pipeline for blood vessel segmentation, network reconstruction, 
 
 **Authors:** Yuan Gao, Jiaxin Ying, Meihan Chen
 
+**Report:** https://docs.google.com/document/d/1P1Rl2OueHgg9tSZ97BlrZumGRCFZUkfo/edit?usp=sharing&ouid=103015076966903764962&rtpof=true&sd=true
+
 ---
 
 ## 🎯 Project Overview
