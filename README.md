@@ -3,8 +3,11 @@
 A comprehensive pipeline for blood vessel segmentation, network reconstruction, and feature extraction from medical images using deep learning (nnU-Net) and topological analysis.
 
 **Course:** Statistical Computing (STOR 674)  
+
 **Institution:** UNC Chapel Hill
+
 **Authors:** Yuan Gao, Jiaxin Ying, Meihan Chen
+
 ---
 
 ## 🎯 Project Overview
