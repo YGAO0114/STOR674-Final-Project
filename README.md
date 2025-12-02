@@ -900,9 +900,13 @@ results/
 
 ---
 
-## 🤝 Contributing
+## 🤝 Author Contributions
 
+- Yuan Gao contributed to the development of the Introduction, conducted the Exploratory Data Analysis (EDA) for data preprocessing, implemented the Blood Vessel Segmentation pipeline, and participated in writing the Discussion section.
+- Jiaxin Ying led the design and implementation of the Vessel Network Reconstruction framework and conducted the Network Feature Extraction analyses, including graph-based morphometrics and geometric feature computation.
+- Meihan Chen contributed to the design and refinement of the Results section and led the writing of the Conclusions, synthesizing the project’s main findings and implications.
 
+All authors collaborated on developing and documenting the Methods for Reproducibility, including code organization, parameter tracking, and experimental documentation.
 
 ---
 
