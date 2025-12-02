@@ -7,29 +7,6 @@ A comprehensive pipeline for blood vessel segmentation, network reconstruction, 
 **Authors:** Yuan Gao, Jiaxin Ying, Meihan Chen
 ---
 
-## 📋 Table of Contents
-
-- [Project Overview](#project-overview)
-- [Dataset Description](#dataset-description)
-- [Installation & Setup](#installation--setup)
-  - [Option 1: Using Conda Environment (Recommended)](#option-1-using-conda-environment-recommended)
-  - [Option 2: Using Singularity Container](#option-2-using-singularity-container)
-  - [Option 3: Manual Installation](#option-3-manual-installation)
-- [Project Pipeline](#project-pipeline)
-- [Quick Start Guide](#quick-start-guide)
-- [Detailed Step-by-Step Instructions](#detailed-step-by-step-instructions)
-  - [Step 0: Exploratory Data Analysis (EDA)](#step-0-exploratory-data-analysis-eda)
-  - [Step 1: Image Segmentation](#step-1-image-segmentation)
-  - [Step 2: Vascular Network Reconstruction](#step-2-vascular-network-reconstruction)
-  - [Step 3: Feature Extraction](#step-3-feature-extraction)
-  - [Step 4: Statistical Analysis](#step-4-statistical-analysis)
-- [File Structure](#file-structure)
-- [Requirements & Dependencies](#requirements--dependencies)
-- [Troubleshooting](#troubleshooting)
-- [Results & Outputs](#results--outputs)
-
----
-
 ## 🎯 Project Overview
 
 This project implements a complete pipeline for analyzing blood vessel networks in medical images:
@@ -920,22 +897,12 @@ results/
 - [nnU-Net GitHub Repository](https://github.com/MIC-DKFZ/nnUNet)
 - [nnU-Net Documentation](https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/)
 - [PyTorch Documentation](https://pytorch.org/docs/stable/index.html)
-- [Singularity Documentation](https://sylabs.io/singularity/)
-
----
-
-## 📄 License
-
-[Specify your license here, e.g., MIT, GPL, etc.]
 
 ---
 
 ## 🤝 Contributing
 
-For questions or issues:
-1. Check the troubleshooting section
-2. Review relevant README files in each `scripts/` subdirectory
-3. Examine log files for detailed error messages
+
 
 ---
 
@@ -959,4 +926,9 @@ Use this checklist to ensure you've completed all steps:
 
 ---
 
+For questions or issues:
+1. Check the troubleshooting section
+2. Review relevant README files in each `scripts/` subdirectory
+3. Examine log files for detailed error messages
+   
 *For questions or bug reports, please refer to the troubleshooting section or check individual step READMEs.*
